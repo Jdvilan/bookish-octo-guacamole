@@ -1,0 +1,7 @@
+print("\t*****Carga academica semestre 2023/1*****")
+print("\nIngresa las materias que cursaras este semestre")
+lista = []
+for x in range(5):
+    materia = input("\tMateria: ")
+    lista.append(materia)
+print(f"Tu tira de materias es {lista}")
