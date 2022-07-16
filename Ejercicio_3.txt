@@ -1,0 +1,18 @@
+d = {"Brocoli":8.55, "Pepino":6.87, "Calabaza":11.55, "Chayote":14.33}
+lista = []
+print("\t*****VERDURAS LA GUERITA*****")
+entrada = int(input("¿Cuantos tipos de verduras llevas?"))
+for x in range(entrada):
+    verdura = input("\tVerdura: ").title()
+    if verdura in d:
+        cantidad = float(input("\tCantidad: "))
+        sub = round((d[verdura]*cantidad),2)
+        lista.append(sub)
+        print(f"Subtotal: ${lista}")
+    else:
+        print("No tenemos inventario para esta opcion")
+
+    suma = 0
+    for number in lista:
+        suma += number
+print(f"\nTotal.....${suma}")
