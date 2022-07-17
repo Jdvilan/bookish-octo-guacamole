@@ -1,0 +1,50 @@
+lista = []
+while True:
+    entrada = input("¿Quieres realizar una operacion?(Y/n): ")
+
+    if entrada == "n":
+        break
+
+    print("\t*****MENU*****")
+    print("\n1.-Suma")
+    print("2.-Resta")
+    print("3.-Multiplicacion")
+    print("4.-Division")
+    print("5.-Historial")
+    num1 = float(input("Ingresa un numero: "))
+    num2 = float(input("Ingresa otro numero: "))
+    opcion = int(input("¿Que operacion quieres realizar?"))
+    if opcion == 1:
+        suma = num1 + num2
+        a = "{} + {} = {}"
+        a_compuesta = a.format(num1, num2, suma)
+        print(a_compuesta)
+        lista.append(a_compuesta)
+    elif opcion == 2:
+        resta = num1 - num2
+        b = "{} - {} = {}"
+        b_compuesta = b.format(num1, num2, resta)
+        print(b_compuesta)
+        lista.append(b_compuesta)
+    elif opcion == 3:
+        multiplicacion = num1 * num2
+        c = "{} * {} = {}"
+        c_compuesta = c.format(num1, num2, multiplicacion)
+        print(c_compuesta)
+        lista.append(c_compuesta)
+    elif opcion == 4:
+        division = num1 / num2
+        d = "{} / {} = {}"
+        d_compuesta = d.format(num1, num2, division)
+        print(d_compuesta)
+        lista.append(d_compuesta)
+    elif opcion == 5:
+        if lista:
+            print(lista)
+            respuesta = input("¿Deseas borrar el historial?(S/N)")
+            if respuesta == "S":
+                lista.clear()
+        else:
+            print("Aun no realizas ninguna operacion")
+    else:
+        print("Escoge una opcion valida")
