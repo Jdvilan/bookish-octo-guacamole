@@ -1,0 +1,20 @@
+lista = []
+entrada = int(input("¿Cuantos articulos deseas facturar?"))
+print("\t*****FACTURA*****")
+for x in range(entrada):
+    producto = float(input(f"Precio del producto {x+1}: $"))
+    lista.append(producto)
+
+print(f"Subtotal: ${lista}")
+suma = 0
+for number in lista:
+    suma += number
+print(f"\nTotal sin IVA.....${suma}")
+iva =float(input("¿Cual es el IVA a aplicar? %"))
+
+def porcentaje(suma, iva=16):
+    return((iva * suma)/100)+suma
+if iva == 16:
+    print(f"Total+IVA.....${porcentaje(suma)}")
+else:
+    print(f"Total+IVA.....${porcentaje(suma, iva)}")
